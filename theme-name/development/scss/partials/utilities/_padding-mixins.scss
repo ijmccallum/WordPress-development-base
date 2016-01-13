@@ -1,0 +1,51 @@
+/*doc
+---
+title: Padding Mixins
+name: padding mixins
+category: Mixins
+---
+Each applies padding at the relevant breakpoint and clears it for the following breakpoint. As they have breakpoints 
+set within the mixin each can be used in the mobile breakpoint area in the SASS component / layout or up to the breakpoint
+for which the padding is to be applied. Multiple padding mixins can be included in the same element, but for all three there is a catch all. 
+
+
+| Mixin                         | Padding variable |
+| ----------------------------- | ---------------- |
+| `@include mobile-padding();`  | $mobile-padding  |
+| `@include tablet-padding();`  | $tablet-padding  |
+| `@include desktop-padding();` | $desktop-padding |
+| `@include all-padding();`     | All 3            |
+
+*/
+@mixin mobile-padding() {
+	padding-left: $mobile-padding;
+	padding-right: $mobile-padding;
+	@include breakpoint(medium) {
+		padding-left:0;
+		padding-right:0;
+	}
+}
+
+@mixin tablet-padding() {
+	@include breakpoint(medium) {
+		padding-left: $tablet-padding;
+		padding-right: $tablet-padding;
+	}
+	@include breakpoint(wide) {
+		padding-right:0;
+		padding-left:0;
+	}
+}
+
+@mixin desktop-padding() {
+	@include breakpoint(wide) {
+		padding-left: $desktop-padding;
+		padding-right: $desktop-padding;
+	}
+}
+
+@mixin all-padding() {
+	@include mobile-padding();
+	@include tablet-padding();
+	@include desktop-padding();
+}

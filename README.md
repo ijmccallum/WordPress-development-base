@@ -1,2 +1,15 @@
-# WordPress-development-base
-A blank theme with sass, grunt, plugin list, and more goodies. Makes setting up easier. My preferences.
+#WordPress Development base  
+
+Jan 2016
+Bones theme adapted into Skeletor
+
+Plugins
+
+ - Admin Menu Editor
+ - Advanced Custom Fields
+ - Contact Form 7
+ - Pods
+ - TinyMCE Advanced
+ - User Role Editor
+ - WP Migrate DB
+ - Yoast SEO

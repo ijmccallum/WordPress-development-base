@@ -1,0 +1,69 @@
+
+$oldIE: false !default;
+
+
+// Media Queries
+// ------------------------------------------------------------------------------
+
+$breakpoints: (
+	tiny: 320px,
+	small: 540px,
+	medium: 768px,
+	wide: 980px,
+	superwide: 1200px
+);
+
+// Site Padding
+// ------------------------------------------------------------------------------
+
+$site-width: 1175px;
+$mobile-padding: 20px;
+$tablet-padding: 20px;
+$desktop-padding: 45px;
+
+// Grid
+// ------------------------------------------------------------------------------
+
+@import "susy";
+$susy: (
+	columns: 12,  // The number of columns in your grid
+	gutters: 0, // The size of a gutter in relation to a single column
+	gutter-position: after,
+	math: fluid,
+	output: isolate,
+);
+
+// Fonts
+// ------------------------------------------------------------------------------
+
+$lightWeight: 300;
+$regularWeight: 400;
+$boldWeight: 600;
+
+
+// Colors
+// ------------------------------------------------------------------------------
+
+$blue-primary: #01add8;
+$blue-secondary: #008bc4;
+
+$purple-primary: #643e89;
+$purple-secondary: #4a2873;
+
+// Icons
+// ------------------------------------------------------------------------------
+
+$icon-codes: (
+	arrow-right: '\e800',
+	arrow-left: '\e801',
+	search: '\e802',
+	download: '\e809',
+	down-open: '\e804',
+	up-open: '\e805',
+	home: '\e806',
+	events: '\e807',
+	news: '\e808',
+	right-open: '\e803',
+	left-open: '\e80a',
+	category: '\e80b',
+);
